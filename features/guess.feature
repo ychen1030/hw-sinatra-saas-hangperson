@@ -5,7 +5,7 @@ Feature: guess correct letter
   I want to see when my guess is correct
 
 Scenario: guess correct letter that occurs once
-
+  
   Given I start a new game with word "garply"
   When I guess "r"
   Then I should see "r" within "span.word"
