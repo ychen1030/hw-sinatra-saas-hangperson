@@ -29,7 +29,7 @@ class HangpersonGame
   end
   
   def guess(letter)
-    if not letter =~ /[[:alpha:]]/
+    if not letter =~ /[[:alpha:]]/ or letter.empty?
       raise ArgumentError
     else 
       letter.downcase!
