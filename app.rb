@@ -42,7 +42,7 @@ class HangpersonApp < Sinatra::Base
     ### YOUR CODE HERE ###
     if @game.guesses.include? letter or @game.wrong_guesses.include?letter
       flash[:message] = "You have already used that letter."
-    elsif !letter.match(/[[:alpha:]]/)
+    elsif !letter.match(/[[:alpha:]]/) or letter == ''
       flash[:message] = "Invalid guess."
     else
       @game.guess(letter)
